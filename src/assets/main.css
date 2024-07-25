@@ -17,15 +17,25 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
+.tile-container.stage2 {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+}
+.tile-container.stage3 {
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)) !important;
+}
+.tile-container.stage4 {
+  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr)) !important;
+}
+
 
 .tile {
   background-image: url(./babka.jpg);
   aspect-ratio: 1;
   background-size: cover;
   cursor: pointer;
-  transition: all 0.35s ease-out;
+  transition: all 0.15s ease-out;
 }
 
 .tile.flipped {
@@ -43,6 +53,16 @@ body {
 h1 {
   font-size: 8rem;
   color: white;
+  transition: all 0.45s ease-in-out;
+}
+h1.stage2 {
+  transform: scale(1.2);
+}
+h1.stage3 {
+  transform: scale(1.4);
+}
+h1.stage4 {
+  transform: scale(1.6);
 }
 
 @media (max-width: 768px) {
