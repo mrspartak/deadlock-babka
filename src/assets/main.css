@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background-color: #9e9181;
+}
+
+.tile-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.tile {
+  background-image: url(./babka.jpg);
+  aspect-ratio: 1;
+  background-size: cover;
+  cursor: pointer;
+  transition: all 0.35s ease-out;
+}
+
+.tile.flipped {
+  transform: rotateY(180deg);
+}
+
+.title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h1 {
+  font-size: 8rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+}

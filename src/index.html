@@ -4,71 +4,8 @@
   <title>Deadlock</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    * {
-      margin: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      font-family: system-ui, sans-serif;
-    }
-
-    body {
-      background-color: #9e9181;
-    }
-
-    .tile-container {
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
-
-    .tile {
-      background-image: url(./assets/babka.jpg);
-      aspect-ratio: 1;
-      background-size: cover;
-
-      transition: all 0.35s ease-out;
-    }
-
-    .tile.flipped {
-      transform: rotateY(180deg);
-    }
-
-    .title-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 8rem;
-      color: white;
-    }
-
-    /* Adjust font size for tablets */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 5rem;
-        /* Smaller font size for tablet devices */
-      }
-    }
-
-    /* Adjust font size for mobile phones */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 3rem;
-        /* Even smaller font size for mobile phones */
-      }
-    }
-  </style>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./assets/main.css">
 </head>
 
 <body>
@@ -6199,16 +6136,7 @@
     <h1>СОСАТЬ</h1>
   </div>
 
-  <script>
-    // flip on click
-    const container = document.querySelectorAll('.tile-container')[0]
-    container.addEventListener('click', function (e) {
-      const tile = e.target.closest('.tile')
-      if (tile) {
-        tile.classList.toggle('flipped')
-      }
-    })
-  </script>
+  <script src="assets/main.js"></script>
 </body>
 
 </html>
